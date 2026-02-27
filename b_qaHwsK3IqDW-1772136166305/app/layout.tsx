@@ -35,6 +35,32 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
+  openGraph: {
+    title: 'Andrew Hewitt | Data Scientist & GIS Analyst',
+    description:
+      'Portfolio of Andrew Hewitt — Data Science student at Arizona State University specializing in atmospheric sciences, aerospace, and public transportation data.',
+    url: process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com',
+    siteName: 'Andrew Hewitt Portfolio',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Andrew Hewitt | Data Scientist & GIS Analyst',
+    description:
+      'Portfolio of Andrew Hewitt — Data Science student at Arizona State University specializing in atmospheric sciences, aerospace, and public transportation data.',
+    images: ['/og.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export const viewport: Viewport = {

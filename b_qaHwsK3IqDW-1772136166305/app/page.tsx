@@ -1,3 +1,6 @@
+'use client'
+
+import React from 'react'
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -8,7 +11,7 @@ import { Education } from "@/components/education"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
-export default function Home() {
+export default function Home(): React.JSX.Element {
   return (
     <>
       <Navbar />
