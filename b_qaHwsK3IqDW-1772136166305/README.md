@@ -18,17 +18,11 @@ This is a Next.js 13 application built with the App Router. It's intended to be 
    - Make sure your Open Graph image (`/og.png`) exists or replace with your own asset.
 
 4. **Vercel Configuration**
-   - Because the code lives in a subdirectory (`b_qaHwsK3IqDW-1772136166305`) of the repository, a `vercel.json` at the repo root tells Vercel where to build from:
-     ```json
-     {
-       "version": 2,
-       "rootDirectory": "b_qaHwsK3IqDW-1772136166305"
-     }
-     ```
-     Without this setting, deployments will 404 because Vercel won’t find the Next.js project.
-   - You can add custom headers or routing preferences in the same file.
-   - The default build command (`npm run build`) and output (`next start`) are already specified in `package.json`.
-   - Push the repository to GitHub and connect the project in Vercel; it will detect the framework automatically.
+    - Because the code lives in a subdirectory (`b_qaHwsK3IqDW-1772136166305`) of the repository, configure the **Root Directory** in the Vercel project settings to that folder (`b_qaHwsK3IqDW-1772136166305`).
+    - Do **not** include `rootDirectory` in `vercel.json` (the platform rejects that property). If you previously added `vercel.json` with `rootDirectory`, remove that property and instead set the root in the Vercel UI.
+    - You can add custom headers or routing preferences in `vercel.json` if needed (but avoid unsupported top‑level properties).
+    - The default build command (`npm run build`) and output (`next start`) are already specified in `package.json`.
+    - Push the repository to GitHub and connect the project in Vercel; it will detect the framework automatically.
 
 5. **Other Best Practices**
    - Avoid `ignoreBuildErrors` in production by fixing TypeScript issues; it's enabled currently for convenience.
